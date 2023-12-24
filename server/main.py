@@ -17,7 +17,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.mount("/static", StaticFiles(directory=BUILD_FOLDER + "static"), "static")
+app.mount("/build", StaticFiles(directory=BUILD_FOLDER))
 
 
 @app.get("/api/health")
